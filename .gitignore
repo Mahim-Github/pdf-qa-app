@@ -12,3 +12,13 @@ Thumbs.db
 # Ignore IDE files
 .vscode/
 .idea/
+
+# Add this line to your .gitignore
+backend/env/Lib/site-packages/
+
+# Ignore specific large files or directories
+/backend/env/Lib/site-packages/torch/lib/
+
+# Ignore large PyTorch library files
+backend/env/Lib/site-packages/torch/lib/torch_cpu.dll
+backend/env/Lib/site-packages/torch/lib/dnnl.lib
