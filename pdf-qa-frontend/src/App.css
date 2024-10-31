@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 77px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #f7f9fa;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+
+.upload-button-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.upload-button {
+  width: 150px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon {
+  width: 20px;
+  height: 20px;
+  color: #48c78e;
+  margin-right: 20px;
+}
+
+.uploaded-file {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.pdf-name {
+  color: #333;
+  margin-left: 5px;
+  margin-right:40px;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.input-field-container {
+  position: absolute;
+  width: calc(100% - 10%);
+  height: 56px;
+  bottom: 10px;
+  left: 60px;
+  right: 10px;
+  border: 1px solid rgba(228, 232, 238, 1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: #f7f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  flex: 1;
+  display: flex;
+}
+
+.input-field input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-field button {
+  background: none;
+  border: none;
+  color: rgba(150, 150, 150, 1);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.input-field button:hover {
+  color: #48c78e;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.message .message-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #48c78e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.message-text {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.message.user .message-text {
+  background-color: #d1e7ff;
+}
