@@ -22,15 +22,15 @@ Follow the steps below to set up and run the project.
 
 ### 1. Clone the Repository
 git clone https://github.com/Mahim-Github/pdf-qa-app.git
-2. Navigate to the Backend Directory
+### 2. Navigate to the Backend Directory
 bash
 Copy code
 cd pdf-qa-app/backend
-3. Create a Virtual Environment
+### 3. Create a Virtual Environment
 bash
 Copy code
 python -m venv env
-4. Activate the Virtual Environment
+### 4. Activate the Virtual Environment
 On Windows:
 bash
 Copy code
@@ -39,28 +39,28 @@ On macOS/Linux:
 bash
 Copy code
 source env/bin/activate
-5. Install Dependencies
+### 5. Install Dependencies
 bash
 Copy code
 pip install -r requirements.txt
-6. Run the Backend Application
+### 6. Run the Backend Application
 Start the FastAPI application with Uvicorn:
 bash
 Copy code
 uvicorn main:app --reload
 The backend will be accessible at http://localhost:8000.
 
-7. Navigate to the Frontend Directory
+### 7. Navigate to the Frontend Directory
 Open a new terminal, navigate to the frontend folder, and set up the frontend:
 
 bash
 Copy code
 cd ../pdf-qa-frontend
-8. Install Frontend Dependencies
+### 8. Install Frontend Dependencies
 bash
 Copy code
 npm install
-9. Run the Frontend Application
+### 9. Run the Frontend Application
 bash
 Copy code
 npm start
@@ -68,7 +68,7 @@ The frontend will be live on http://localhost:3000.
 
 Note: Ensure the frontend is configured to make requests to the backend's correct URL (http://127.0.0.1:8000).
 
-Endpoints
+## Endpoints
 Backend Endpoints
 GET / - Welcome message.
 POST /upload-pdf/ - Upload a PDF file.
@@ -90,18 +90,21 @@ axios - For making HTTP requests to the backend.
 Database
 The backend application uses an SQLite database (pdf_qa.db) to store information about uploaded PDF files.
 
-Project Structure
+## Project Structure
 graphql
 Copy code
 pdf-qa-app/
 ├── backend/
-│   ├── main.py          # FastAPI app entry point
-│   ├── requirements.txt # Backend dependencies
-│   ├── pdf_qa.db        # SQLite database file
-│   └── .gitignore       # Git ignore file for backend
+│   ├── main.py              # FastAPI app entry point
+│   ├── database.py          # Database connection and setup (replaces pdf_qa.db)
+│   ├── uploads/             # Directory for storing uploaded PDF files
+│   ├── requirements.txt     # Backend dependencies
+│   └── .gitignore           # Git ignore file for backend (ignores virtual env, cache, etc.)
 └── pdf-qa-frontend/
-    ├── src/             # React source files
-    ├── package.json     # Frontend dependencies
-    └── .gitignore       # Git ignore file for frontend
-License
+    ├── src/                 # React source files
+    ├── public/              # Public assets directory for React (includes index.html, favicon, etc.)
+    ├── package.json         # Frontend dependencies and scripts
+    └── .gitignore           # Git ignore file for frontend (ignores node_modules, build files, etc.)
+
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
